@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>从零开始搭建Blog | ChLeiの博客</title><meta name="author" content="ChenLei"><meta name="copyright" content="ChenLei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="记录自己搭建个人博客网站的过程以及中途遇见的问题、解决办法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始搭建Blog">
+<meta property="og:url" content="https://chenleixwp.top/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="ChLeiの博客">
+<meta property="og:description" content="记录自己搭建个人博客网站的过程以及中途遇见的问题、解决办法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ts1.cn.mm.bing.net/th/id/R-C.703b44dc8fcb5dd8fc8345e1b17546ed?rik=%2f89P9c8hVr7P9Q&riu=http%3a%2f%2fblog.ochre-media.com%2fwp-content%2fuploads%2f2015%2f09%2fblog-image-created.jpg&ehk=XhfmEdNJ5cGDHnKb957THr1sZQTL54%2b%2b55u2Xhkpgns%3d&risl=&pid=ImgRaw&r=0">
+<meta property="article:published_time" content="2023-08-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-11T04:13:17.634Z">
+<meta property="article:author" content="ChenLei">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ts1.cn.mm.bing.net/th/id/R-C.703b44dc8fcb5dd8fc8345e1b17546ed?rik=%2f89P9c8hVr7P9Q&riu=http%3a%2f%2fblog.ochre-media.com%2fwp-content%2fuploads%2f2015%2f09%2fblog-image-created.jpg&ehk=XhfmEdNJ5cGDHnKb957THr1sZQTL54%2b%2b55u2Xhkpgns%3d&risl=&pid=ImgRaw&r=0"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chenleixwp.top/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?93d2e5b603ee1b50123c29c053ea7b01";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '从零开始搭建Blog',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-08-11 12:13:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="ChLeiの博客" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cqu/"><i class="fa-fw fa fa-school"></i><span> 分享</span></a></li><li><a class="site-page child" href="/Gallery/GalleryGroup"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/%E8%83%8C%E6%99%AF%E5%A3%81%E7%BA%B8/%E9%A1%B6%E9%83%A8%E8%83%8C%E6%99%AF.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="ChLeiの博客"><img class="site-icon" src="/img/%E5%A4%B4%E5%83%8F/%E5%A4%B4%E5%83%8F.jpg"/><span class="site-name">ChLeiの博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cqu/"><i class="fa-fw fa fa-school"></i><span> 分享</span></a></li><li><a class="site-page child" href="/Gallery/GalleryGroup"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">从零开始搭建Blog</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-05T16:00:00.000Z" title="发表于 2023-08-06 00:00:00">2023-08-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-11T04:13:17.634Z" title="更新于 2023-08-11 12:13:17">2023-08-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/blog/">blog</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="从零开始搭建Blog"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout hide-aside" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="note purple icon-padding flat"><i class="note-icon fas fa-bullhorn"></i><p>记录自己搭建个人博客网站的过程以及中途遇见的问题、解决办法。暑假纯无聊，突然就想搞个博客来做学习记录，但是这个过程花费了我不少时间，有点舍本逐末的感觉了，好在成功了。个人没学过前端（搭建并不需要知道原理），纯小白一个，整个都是开源的,跟着教程即可完成，但是步骤较多，需要耗费一定的时间。整个过程花了9元，从阿里云买了个域名（后缀.top：9元/年，后缀.com：35元/年）<br>分成两个部分进行：第一部分搭建完成个人网站、第二部分跟换主题。</p>
+</div>
+<h2 id="第一部分-搭建个人网站"><a href="#第一部分-搭建个人网站" class="headerlink" title="第一部分 搭建个人网站"></a>第一部分 搭建个人网站</h2><div class="note primary no-icon simple"><p>访问下链接，步骤都非常详细，跟着操作即可。<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">https://zhuanlan.zhihu.com/p/102592286</a></p>
+</div>
+<h4 id="第一篇"><a href="#第一篇" class="headerlink" title="第一篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103268406">第一篇</a></h4><div class="note primary no-icon simple"><p>注册github账号，当然之前有的就不用注册。</p>
+</div>
+<h4 id="第二篇"><a href="#第二篇" class="headerlink" title="第二篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103325381">第二篇</a></h4><div class="note primary no-icon simple"><p>按照步骤安装git，在安装时，页面可能与步骤有差异，一样的就按照他的勾选，其他都默认。</p>
+</div>
+<h4 id="第三篇"><a href="#第三篇" class="headerlink" title="第三篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103391101">第三篇</a></h4><div class="note primary no-icon simple"><p>绑定Github并提交文件，在2.提交文件这儿有两种方法，根据自己情况选择，我选择的是第一种。关于新建text，如下图所示：</p>
+</div>
+<p><img src="/img/搭建博客/text.jpg" width="90%" height="80%"></p>
+<p><div align=center><img src="/img/搭建博客/text1.jpg" width="90%" height="80%"></div><br><div class="note primary no-icon simple"><p>对于进Git bash注意是从哪个目录进，就在当前目录空白处右键，找git bash  here点击进入，在git status查询状态时，第一次提交时会让你输入用户名和邮箱，其中用户名为github的账号名，邮箱使用注册时的即可。但是注意代码填用户名和邮箱的双引号和前面是有一个空格：</p>
+</div><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;clxwp&quot;</span><br><span class="line">git config --global user.email &quot;***@***.com&quot;</span><br></pre></td></tr></table></figure><br><div class="note primary no-icon simple"><p>最后很关键的一点，现在github的分支有master改为了main，所以需要将git push origin master将“master”改成“main”。</p>
+</div></p>
+<h4 id="第四篇"><a href="#第四篇" class="headerlink" title="第四篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103860494">第四篇</a></h4><div class="note primary no-icon simple"><p>在万网购买域名（不买一样能行），在购买域名后需要填入个人信息模板，即实名认证，这个审核需要一定的时间。</p>
+</div>
+<h4 id="第五篇"><a href="#第五篇" class="headerlink" title="第五篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103860494">第五篇</a></h4><div class="note primary no-icon simple"><p>首先第一点，在cmd操作时需要以管理员的身份进入，不然测试时会报错。</p>
+</div>
+<p><div align=center><img src="/img/搭建博客/cmd.jpg" width="90%" height="80%"></div><br><div class="note primary no-icon simple"><p>在2.安装Hexo滑到底部，因为版本不同，现在的Github Pages如下图所示：</p>
+</div></p>
+<p><div align=center><img src="/img/搭建博客/page.jpg" width="90%" height="80%"></div><br><div class="note primary no-icon simple"><p>在D盘建立一个文件夹Blog（可以任意取），点开Blog文件夹，鼠标右击打开Git Bush Here，这是在Blog根目录下打开的，之后基本都是在这个根目录下打开Git Bush Here。在页面部署完成之后，输入Hexo s命令进行查看：</p>
+</div></p>
+<p><div align=center><img src="/img/搭建博客/hexos.jpg" width="90%" height="80%"></div><br><div class="note primary no-icon simple"><p>将Hexo部署到Github，回到Blog文件夹，用笔记打开_config.yml，下滑到文件底部，填上下面内容，注意已将branch： master改为branch：main，如下：</p>
+</div><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/fengye97/fengye97.github.io.git  #你的仓库地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><br><div class="note primary no-icon simple"><p>hexo三部曲！！！在后面经常会用到，在修改配置后，需要进行三部曲，只有三部曲后才会把改了之后的重新部署到网页上。但是在这里有个细节就是在你改了之后可以先Hexo s来看改的效果，不用每次都三部曲非常浪费时间，最后在三部曲一次到位。</p>
+</div><br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean   #清除缓存文件 db.json 和已生成的静态文件 public</span><br><span class="line">hexo g       #生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)</span><br><span class="line">hexo d       #自动生成网站静态文件，并部署到设定的仓库(hexo deploy 的缩写)</span><br></pre></td></tr></table></figure><br><div class="note primary no-icon simple"><p>另外出现下面这个错误,那是因为浏览https：//localhost：4000没关闭，需要先Ctrl+C关闭即可。</p>
+</div></p>
+<p><div align=center><img src="/img/搭建博客/hexo1.png" width="90%" height="80%"></div></p>
+<h4 id="第六篇"><a href="#第六篇" class="headerlink" title="第六篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103813944">第六篇</a></h4><div class="note primary no-icon simple"><p>解析域名，步骤的最后，save若是空白的需要自己添加，这个非常关键，不然Hexo三部曲后从网址进不去的，如果后面发现网址进不去，记得检查一下，这个保存没。</p>
+</div>
+<p><div align=center><img src="/img/搭建博客/save.png" width="90%" height="80%"></div></p>
+<h4 id="第七篇"><a href="#第七篇" class="headerlink" title="第七篇"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105584373">第七篇</a></h4><div class="note primary no-icon simple"><p>从第七篇后面就是配置主题，他所配置的主题是Next，这个主题比较简洁，我主题是使用的Butterfly，第二部分直接配置Butterfly主题。但是先可以配置Next主题，熟悉配置的流程。打开Blog的文件夹，在空白处右击进入Git Bash Here，输入下代码将Next主题下载到目录Blog/themes里。</p>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next </span><br></pre></td></tr></table></figure>
+<div class="note primary no-icon simple"><p>这里注意区别Blog（根目录）的_config.yml，这称为站点配置文件；Blog/themes/next下的_config.yml为主题配置文件，不要搞混了，同时注意所有冒号后面都有空格。这里不需要每一步都Hexo三部曲，用Hexo s来查看修改后页面，最后在Hexo三部曲，避免浪费时间。</p>
+</div>
+<h4 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106060640">第八章</a></h4><div class="note primary no-icon simple"><p>跟着配置就OK了</p>
+</div>
+<h2 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h2><div class="note primary no-icon simple"><p>参考：<br><a target="_blank" rel="noopener" href="https://butterfly.js.org/">https://butterfly.js.org/</a><br><a target="_blank" rel="noopener" href="https://fe32.top/articles/hexo1601/">https://fe32.top/articles/hexo1601/</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://chenleixwp.top">ChenLei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chenleixwp.top/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">https://chenleixwp.top/搭建博客记录/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://chenleixwp.top" target="_blank">ChLeiの博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/Github/">Github</a><a class="post-meta__tags" href="/tags/Blog/">Blog</a></div><div class="post_share"><div class="social-share" data-image="https://ts1.cn.mm.bing.net/th/id/R-C.703b44dc8fcb5dd8fc8345e1b17546ed?rik=%2f89P9c8hVr7P9Q&amp;riu=http%3a%2f%2fblog.ochre-media.com%2fwp-content%2fuploads%2f2015%2f09%2fblog-image-created.jpg&amp;ehk=XhfmEdNJ5cGDHnKb957THr1sZQTL54%2b%2b55u2Xhkpgns%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/%E7%89%A9%E7%90%86%E5%85%89%E5%AD%A6%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="物理光学的学习记录"><img class="cover" src="/img/%E5%85%89%E5%AD%A6/%E8%89%B2%E6%95%A3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">物理光学的学习记录</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODgxOC8zNTI4MA=="></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/%E8%83%8C%E6%99%AF%E5%A3%81%E7%BA%B8/%E9%A1%B6%E9%83%A8%E8%83%8C%E6%99%AF.jpg')"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">公益广告</p><div class="bg-ad"><div>重庆市潼南区慈善会(英文名: CHONGQING TONG-NANCHARITY ASSOCIATION; 缩写: TNCA)成立于2005年10月21日，是经政府批准依法注册登记，由从事、关心、支持和热爱慈善事业的机关企事业单位、公民、法人及其他社会组织志愿参加的非营利公益社会团体。</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="http://www.cqtnchrity.com/html/index.html">潼南区慈善会</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">修仙导航</p><ul class="ft-links"><li><a target="_blank" rel="noopener" href="https://fe32.top/articles/hexo1600/">建站指南</a><a target="_blank" rel="noopener" href="https://baidu.com">网址导航</a></li><li><a href="https://chenleixwp.top/about/">关于博主</a><a href="https://chenleixwp.top/archives/">文章归档</a></li><li><a href="https://chenleixwp.top/categories/">文章分类</a><a href="https://chenleixwp.top/tags/">文章标签</a></li><li><a href="https://chenleixwp.top/Gallery/GalleryGroup">我的相册</a><a href="https://chenleixwp.top/Gallery/mygril">一些壁纸</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="https://cqu.edu.cn/"><img src="/img/重大/重庆大学.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="http://coe.cqu.edu.cn/"><img src="/img/重大/光电工程学院.jpg" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="http://huxi.cqu.edu.cn/page/6cc07cd16e678d8a"><img src="/img/重大/虎溪.jpg" alt=""/></a></div></div></div></div><div class="copyright">&copy;2023  <i id="heartbeat" class="fa fas fa-heartbeat"></i> ChenLei</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi! Welcome to my Blog!</div></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addModeChange('mermaid', runMermaid)
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  function abcjsInit() {
+    function abcjsFn() {
+      for (let abcContainer of document.getElementsByClassName("abc-music-sheet")) {
+        ABCJS.renderAbc(abcContainer, abcContainer.innerHTML, {responsive: 'resize'})
+      }
+    }
+    
+    typeof ABCJS === 'object' ? abcjsFn()
+      : getScript('https://cdn.jsdelivr.net/npm/abcjs/dist/abcjs-basic-min.min.js').then(abcjsFn)
+  }
+
+  window.pjax ? abcjsInit() : document.addEventListener('DOMContentLoaded', abcjsInit)
+})()</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script src="/js/custom.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
